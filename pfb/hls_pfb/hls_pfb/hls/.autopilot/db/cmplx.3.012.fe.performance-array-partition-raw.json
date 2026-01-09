@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 3 2",
+    "file": "pfb.cpp",
+    "fileloc": 128,
+    "instructions": 36,
+    "name": "pfb_multichannel_decimator",
+    "total_instructions": 892
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "pfb.cpp",
+    "fileloc": 3,
+    "instructions": 24,
+    "name": "read_inputs",
+    "total_instructions": 88
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "pfb.cpp",
+    "fileloc": 93,
+    "instructions": 33,
+    "name": "write_outputs",
+    "total_instructions": 89
+  },
+  "3": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "pfb.cpp",
+    "fileloc": 28,
+    "instructions": 559,
+    "loads": {
+      "G": 54
+    },
+    "name": "compute_pfb",
+    "stores": {
+      "G": 39
+    },
+    "total_instructions": 679
+  }
+}

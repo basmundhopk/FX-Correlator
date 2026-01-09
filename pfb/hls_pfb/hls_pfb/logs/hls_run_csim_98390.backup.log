@@ -1,0 +1,73 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls_pfb.hlsrun_csim_summary, at Thu Jan  8 19:14:00 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb -config /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg -cmdlineconfig /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'brett' on host 'brett-System-Product-Name' (Linux_x86_64 version 6.17.13-zabbly+) on Thu Jan 08 19:14:01 PST 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/brett/Documents/FX_Correlator/pfb/hls_pfb'
+WARNING: [HLS 200-40] Environment variable 'C_INCLUDE_PATH' is set to /usr/include/x86_64-linux-gnu:.
+WARNING: [HLS 200-40] Environment variable 'CPLUS_INCLUDE_PATH' is set to /usr/include/x86_64-linux-gnu:.
+INFO: [HLS 200-1909] Reading HLS ini file /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb 
+INFO: [HLS 200-1510] Running: open_project /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg
+WARNING: [HLS 200-2001] file not found '/home/brett/FX_Correlator/pfb/hls_pfb/pfb.h' see [hls] at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'syn.file=pfb.cpp' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/brett/FX_Correlator/pfb/hls_pfb/pfb.h' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(9)
+WARNING: [HLS 200-40] Cannot find design file '/home/brett/FX_Correlator/pfb/hls_pfb/pfb.h'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.h' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=pfb_tb.cpp' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(5)
+INFO: [HLS 200-10] Adding test bench file '/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=pfb_multichannel_decimator' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(4)
+INFO: [HLS 200-1465] Applying ini 'part=xc7z045ffg900-2' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z045-ffg900-2'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(6)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'csim.ldflags=-B/usr/lib/x86_64-linux-gnu/' at /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_config.cfg(7)
+INFO: [HLS 200-1510] Running: apply_ini /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../pfb_tb.cpp in debug mode
+In file included from ../../../../pfb_tb.cpp:5:
+../../../../pfb.h:20:31: error: ‘fft_config’ was not declared in this scope
+ typedef hls::ip_fft::config_t<fft_config> fft_config_t;
+                               ^~~~~~~~~~
+../../../../pfb.h:20:41: error: template argument 1 is invalid
+ typedef hls::ip_fft::config_t<fft_config> fft_config_t;
+                                         ^
+../../../../pfb.h:21:31: error: ‘fft_config’ was not declared in this scope
+ typedef hls::ip_fft::status_t<fft_config> fft_status_t;
+                               ^~~~~~~~~~
+../../../../pfb.h:21:31: note: suggested alternative: ‘fft_config_t’
+ typedef hls::ip_fft::status_t<fft_config> fft_status_t;
+                               ^~~~~~~~~~
+                               fft_config_t
+../../../../pfb.h:21:41: error: template argument 1 is invalid
+ typedef hls::ip_fft::status_t<fft_config> fft_status_t;
+                                         ^
+make: *** [csim.mk:79: obj/pfb_tb.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.55 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.64 seconds; current allocated memory: 0.211 MB.
+INFO: [HLS 200-1510] Running: close_project 
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 1.3 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 1.36 seconds; peak allocated memory: 274.414 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Jan  8 19:14:02 2026...

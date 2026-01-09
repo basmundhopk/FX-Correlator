@@ -1,0 +1,104 @@
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:10:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_inputs_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_inputs_XLX_SEP_ PragmaOptions=II=1 rewind=false_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1 rewind=false
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:15:9: warning: '#pragma HLS interface' can only be applied inside function body [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=0_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_inputs_XLX_SEP_ PragmaOptions=ap_ctrl_hs_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:39:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=variable=branch_memory complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=branch_memory complete dim=1
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:40:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=variable=branch_memory complete dim=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=branch_memory complete dim=2
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=variable=branch_memory type=RAM_1P impl=BRAM_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS BIND_STORAGE variable=branch_memory type=RAM_1P impl=BRAM
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:50:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=II=1 rewind=false_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1 rewind=false
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:57:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=II=1 rewind=false_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1 rewind=false
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:62:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=compute_pfb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:100:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_outputs_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE off
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_outputs_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:107:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_outputs_XLX_SEP_ PragmaOptions=II=1 rewind=false_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1 rewind=false
+        ^
+directive:1:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=name=pfb_multichannel_decimator_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=pfb_multichannel_decimator
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:141:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_i0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_i0
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:142:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_q0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_q0
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:143:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_i1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_i1
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:144:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_q1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_q1
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:145:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_i2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_i2
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:146:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_q2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_q2
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:147:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_i3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_i3
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:148:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=din_data_q3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=din_data_q3
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:150:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=dout_data_0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=dout_data_0
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:151:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=dout_data_1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=dout_data_1
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:152:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=dout_data_2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=dout_data_2
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=axis port=dout_data_3_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE axis port=dout_data_3
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:155:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=m_axi port=coeff offset=slave bundle=gmem depth=4096 latency=64_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=coeff offset=slave bundle=gmem depth=4096 latency=64
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:158:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=variable=stream_read_to_compute depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=stream_read_to_compute depth=16
+        ^
+/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:164:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=pfb_multichannel_decimator_XLX_SEP_ PragmaOptions=variable=stream_compute_to_write depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=stream_compute_to_write depth=16
+        ^
+35 warnings generated.

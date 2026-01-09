@@ -1,0 +1,160 @@
+<ENTRY>
+{
+ "thisFile": "/home/brett/FX_Correlator/pfb/hls_pfb/hls_pfb/hls_pfb.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Jan  3 13:36:14 2026",
+ "timestampMillis": "1767476174921",
+ "buildStep": {
+  "cmdId": "bc133f36-9f72-4aae-ae22-8464758b4d56",
+  "name": "vitis-run",
+  "logFile": "/home/brett/FX_Correlator/pfb/hls_pfb/hls_pfb/logs/hls_pfb.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --package --config /home/brett/FX_Correlator/pfb/hls_pfb/hls_config.cfg --work_dir hls_pfb ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "/home/brett/FX_Correlator/pfb/hls_pfb/hls_config.cfg",
+   "--work_dir",
+   "hls_pfb"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/brett/FX_Correlator/pfb/hls_pfb"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan  3 13:36:14 2026",
+ "timestampMillis": "1767476174921",
+ "status": {
+  "cmdId": "bc133f36-9f72-4aae-ae22-8464758b4d56",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Jan  3 13:36:16 2026",
+ "timestampMillis": "1767476176215",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "pfb_multichannel_decimator",
+     "file": "/home/brett/FX_Correlator/pfb/hls_pfb/hls_pfb/pfb_multichannel_decimator.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/brett/FX_Correlator/pfb/hls_pfb/pfb.cpp",
+     "/home/brett/FX_Correlator/pfb/hls_pfb/pfb.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Jan  3 13:36:16 2026",
+ "timestampMillis": "1767476176216",
+ "buildStep": {
+  "cmdId": "bbe1c00f-e635-41d1-b851-31eef789ed48",
+  "name": "export_design",
+  "logFile": "/home/brett/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/hls.log",
+  "commandLine": "export_design -flow none",
+  "args": [
+   "-flow",
+   "none"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/brett/FX_Correlator/pfb/hls_pfb"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan  3 13:36:16 2026",
+ "timestampMillis": "1767476176216",
+ "status": {
+  "cmdId": "bbe1c00f-e635-41d1-b851-31eef789ed48",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan  3 13:36:24 2026",
+ "timestampMillis": "1767476184487",
+ "status": {
+  "cmdId": "bbe1c00f-e635-41d1-b851-31eef789ed48",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Jan  3 13:36:24 2026",
+ "timestampMillis": "1767476184543",
+ "status": {
+  "cmdId": "bc133f36-9f72-4aae-ae22-8464758b4d56",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan  3 13:36:24 2026",
+ "timestampMillis": "1767476184543",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Jan  3 13:36:24 2026",
+ "timestampMillis": "1767476184543",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

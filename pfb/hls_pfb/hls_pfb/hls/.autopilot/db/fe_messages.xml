@@ -1,0 +1,147 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5583" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:15:9" msg_body="'#pragma HLS interface' can only be applied inside function body">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_inputs" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_inputs" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1 rewind=false" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_inputs" ARG_PragmaIsValid="0" ARG_PragmaOptions="ap_ctrl_hs" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=branch_memory complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=branch_memory complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=branch_memory type=RAM_1P impl=BRAM" ARG_PragmaType="bind_storage" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:50:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1 rewind=false" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1 rewind=false" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:62:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="compute_pfb" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:100:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_outputs" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:102:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_outputs" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:107:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="write_outputs" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1 rewind=false" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pfb_multichannel_decimator" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:141:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_i0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:142:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_q0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:143:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_i1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:144:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_q1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:145:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_i2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:146:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_q2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:147:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_i3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:148:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=din_data_q3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:150:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=dout_data_0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:151:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=dout_data_1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:152:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=dout_data_2" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:153:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=dout_data_3" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:155:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=coeff offset=slave bundle=gmem depth=4096 latency=64" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:156:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:163:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stream_read_to_compute depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:164:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pfb_multichannel_decimator" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=stream_compute_to_write depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:61:21" msg_body="Loop 'store_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="store_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:68:23" msg_body="Loop 'channel_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="channel_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:73:23" msg_body="Loop 'tap_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="tap_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:32:0" msg_body="Unrolling loop 'store_loop' (/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:61:21) in function 'compute_pfb' completely with a factor of 4">
+        <args Factor="4" LoopLoc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:61:21" LoopName="store_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:32:0" msg_body="Unrolling loop 'channel_loop' (/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:68:23) in function 'compute_pfb' completely with a factor of 4">
+        <args Factor="4" LoopLoc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:68:23" LoopName="channel_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:32:0" msg_body="Unrolling loop 'tap_loop' (/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:73:23) in function 'compute_pfb' completely with a factor of 4">
+        <args Factor="4" LoopLoc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:73:23" LoopName="tap_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:38:0" msg_body="Applying array_partition to '_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE13branch_memory.q': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE13branch_memory.q"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:38:0" msg_body="Applying array_partition to '_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE13branch_memory.i': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE13branch_memory.i"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:160:33" msg_body="Aggregating fifo (hls::stream) variable 'stream_read_to_compute' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="fifo (hls::stream)" Name="stream_read_to_compute"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:161:36" msg_body="Aggregating fifo (hls::stream) variable 'stream_compute_to_write' with compact=bit mode in 128-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="128" HwTyName="fifo (hls::stream)" Name="stream_compute_to_write"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:45:0" msg_body="array_partition dim=1 type=cyclic factor=5 variable=_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE12local_coeffs 1 pfb_multichannel_decimator /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:45:0 /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:57:9compute_pfb(hls::stream&lt;parallel_sample_t, 0&gt;&amp;, hls::stream&lt;parallel_sample_t, 0&gt;&amp;, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*)::local_coeffs">
+        <args PragmaFunction="pfb_multichannel_decimator" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=5 variable=_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE12local_coeffs" PragmaSrcLoc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:57:9" PragmaSrcLoc-DebugLoc="File /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp Line 57 Column 9" PragmaType="array_partition" VarName="compute_pfb(hls::stream&lt;parallel_sample_t, 0&gt;&amp;, hls::stream&lt;parallel_sample_t, 0&gt;&amp;, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*)::local_coeffs" varLoc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:45:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:57:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'compute_pfb(hls::stream&lt;parallel_sample_t, 0&gt;&amp;, hls::stream&lt;parallel_sample_t, 0&gt;&amp;, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*)::local_coeffs' due to pipeline pragma">
+        <args Dim="1" Factor="5" Mode="cyclic" Name="compute_pfb(hls::stream&lt;parallel_sample_t, 0&gt;&amp;, hls::stream&lt;parallel_sample_t, 0&gt;&amp;, ap_fixed&lt;16, 1, (ap_q_mode)5, (ap_o_mode)3, 0&gt; const*)::local_coeffs" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb.cpp:45:0" msg_body="Applying array_partition to '_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE12local_coeffs': Cyclic partitioning with factor 5 on dimension 1.">
+        <args Dim="1" Factor="5" Mode="Cyclic" UOName="_ZZ11compute_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE12local_coeffs"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

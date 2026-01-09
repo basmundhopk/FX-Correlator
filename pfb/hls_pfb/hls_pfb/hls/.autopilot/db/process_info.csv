@@ -1,0 +1,6 @@
+,read_inputs_U0,,status1.csv
+,compute_pfb_U0,,status2.csv
+,write_outputs_U0,,status3.csv
+,AESL_inst_pfb_multichannel_decimator,,module_status1.csv
+compute_pfb_U0,grp_compute_pfb_Pipeline_load_coeffs_fu_151,,module_status2.csv
+compute_pfb_U0,grp_compute_pfb_Pipeline_compute_loop_fu_168,,module_status3.csv

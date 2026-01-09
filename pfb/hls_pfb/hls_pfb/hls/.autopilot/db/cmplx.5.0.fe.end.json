@@ -1,0 +1,101 @@
+{
+    "1": {
+        "name": "compute_pfb_Pipeline_load_coeffs",
+        "file": "\/home\/brett\/Documents\/FX_Correlator\/pfb\/hls_pfb\/pfb.cpp",
+        "fileloc": "49",
+        "instructions": "49",
+        "total_instructions": "49",
+        "calls": "",
+        "basicblocks": "10",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "G": "5",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "write_outputs",
+        "file": "pfb.cpp",
+        "fileloc": "93",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "compute_pfb_Pipeline_compute_loop",
+        "file": "\/home\/brett\/Documents\/FX_Correlator\/pfb\/hls_pfb\/pfb.cpp",
+        "fileloc": "31",
+        "instructions": "360",
+        "total_instructions": "360",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "G": "52",
+            "L": "4"
+        },
+        "stores": {
+            "G": "32",
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "read_inputs",
+        "file": "pfb.cpp",
+        "fileloc": "3",
+        "instructions": "32",
+        "total_instructions": "32",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "pfb_multichannel_decimator",
+        "file": "pfb.cpp",
+        "fileloc": "128",
+        "instructions": "42",
+        "total_instructions": "571",
+        "calls": "4 5 2",
+        "basicblocks": "1"
+    },
+    "5": {
+        "name": "compute_pfb",
+        "file": "pfb.cpp",
+        "fileloc": "28",
+        "instructions": "52",
+        "total_instructions": "461",
+        "calls": "1 3",
+        "basicblocks": "3",
+        "loads": {
+            "G": "2"
+        },
+        "stores": {
+            "G": "2"
+        }
+    }
+}

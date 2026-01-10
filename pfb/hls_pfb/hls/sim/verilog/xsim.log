@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Jan  9 20:27:33 2026
+# Process ID: 164474
+# Current directory: /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/pfb_multichannel/xsim_script.tcl}
+# Log file: /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/sim/verilog/xsim.log
+# Journal file: /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/sim/verilog/xsim.jou
+# Running On: brett-System-Product-Name, OS: Linux, CPU Frequency: 5208.336 MHz, CPU Physical cores: 16, Host memory: 64928 MB
+#-----------------------------------------------------------
+source xsim.dir/pfb_multichannel/xsim_script.tcl
+# xsim {pfb_multichannel} -autoloadwcfg -tclbatch {pfb_multichannel.tcl}
+Time resolution is 1 ps
+source pfb_multichannel.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 8 [0.00%] @ "125000"
+// RTL Simulation : 1 / 8 [0.00%] @ "74225000"
+// RTL Simulation : 2 / 8 [0.00%] @ "106435000"
+// RTL Simulation : 3 / 8 [0.00%] @ "138645000"
+// RTL Simulation : 4 / 8 [0.00%] @ "170855000"
+// RTL Simulation : 5 / 8 [0.00%] @ "203065000"
+// RTL Simulation : 6 / 8 [0.00%] @ "235275000"
+// RTL Simulation : 7 / 8 [0.00%] @ "267485000"
+// RTL Simulation : 8 / 8 [100.00%] @ "299695000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 299755 ns : File "/home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/sim/verilog/pfb_multichannel.autotb.v" Line 976
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:49 . Memory (MB): peak = 1235.680 ; gain = 0.000 ; free physical = 38464 ; free virtual = 50536
+## quit
+INFO: xsimkernel Simulation Memory Usage: 196356 KB (Peak: 246528 KB), Simulation CPU Usage: 48530 ms
+INFO: [Common 17-206] Exiting xsim at Fri Jan  9 20:28:24 2026...

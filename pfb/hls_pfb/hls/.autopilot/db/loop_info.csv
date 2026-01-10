@@ -1,0 +1,6 @@
+read_inputs_U0,read_loop,upc_loop_status1.csv
+decimate_pfb_U0,load_coeffs,pp_loop_status1.csv
+decimate_pfb_U0,compute_loop,pp_loop_status2.csv
+fft_U0.unpack_U0,unpack_loop,upc_loop_status2.csv
+fft_U0.repack_U0,repack_loop,upc_loop_status3.csv
+write_outputs_U0,write_loop,upc_loop_status4.csv

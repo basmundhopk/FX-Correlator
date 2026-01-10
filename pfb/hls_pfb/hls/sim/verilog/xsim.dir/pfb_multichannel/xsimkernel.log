@@ -1,0 +1,7 @@
+Running: xsim.dir/pfb_multichannel/xsimk -simmode gui -wdb pfb_multichannel.wdb -simrunnum 0 -socket 39565
+Design successfully loaded
+Design Loading Memory Usage: 107260 KB (Peak: 108220 KB)
+Design Loading CPU Usage: 100 ms
+Simulation completed
+Simulation Memory Usage: 196356 KB (Peak: 246528 KB)
+Simulation CPU Usage: 48530 ms

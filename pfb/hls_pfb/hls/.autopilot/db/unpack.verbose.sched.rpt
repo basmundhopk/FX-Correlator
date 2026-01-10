@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'unpack'
+================================================================
+* Date:           Fri Jan  9 19:34:42 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_pfb
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.197 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1026|     1026|  10.260 us|  10.260 us|  1026|  1026|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- unpack_loop  |     1024|     1024|         2|          1|          1|  1024|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.19>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch3_in, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch2_in, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch1_in, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %ch0_in, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %stream_compute_to_fft, void @empty_19, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.29ns)   --->   "%store_ln69 = store i11 0, i11 %i" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 11 'store' 'store_ln69' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln69 = br void %for.inc" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 12 'br' 'br_ln69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i_3 = load i11 %i" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 13 'load' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.48ns)   --->   "%icmp_ln69 = icmp_eq  i11 %i_3, i11 1024" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 14 'icmp' 'icmp_ln69' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (1.48ns)   --->   "%i_4 = add i11 %i_3, i11 1" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 15 'add' 'i_4' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln69 = br i1 %icmp_ln69, void %for.inc.split, void %for.end" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 16 'br' 'br_ln69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (3.41ns)   --->   "%stream_compute_to_fft_read = read i128 @_ssdm_op_Read.ap_fifo.volatile.i128P0A, i128 %stream_compute_to_fft" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:71]   --->   Operation 17 'read' 'stream_compute_to_fft_read' <Predicate = (!icmp_ln69)> <Delay = 3.41> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 3.41> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 4096> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_s = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %stream_compute_to_fft_read, i32 96, i32 127" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:71]   --->   Operation 18 'partselect' 'tmp_s' <Predicate = (!icmp_ln69)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln73 = trunc i128 %stream_compute_to_fft_read" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:73]   --->   Operation 19 'trunc' 'trunc_ln73' <Predicate = (!icmp_ln69)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %stream_compute_to_fft_read, i32 32, i32 63" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:74]   --->   Operation 20 'partselect' 'tmp_2' <Predicate = (!icmp_ln69)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32.i32, i128 %stream_compute_to_fft_read, i32 64, i32 95" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:75]   --->   Operation 21 'partselect' 'tmp_3' <Predicate = (!icmp_ln69)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (1.29ns)   --->   "%store_ln69 = store i11 %i_4, i11 %i" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 22 'store' 'store_ln69' <Predicate = (!icmp_ln69)> <Delay = 1.29>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%ret_ln78 = ret" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:78]   --->   Operation 31 'ret' 'ret_ln78' <Predicate = (icmp_ln69)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.40>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln70 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:70]   --->   Operation 23 'specpipeline' 'specpipeline_ln70' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%speclooptripcount_ln69 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1024, i64 1024, i64 1024" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 24 'speclooptripcount' 'speclooptripcount_ln69' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specloopname_ln69 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 25 'specloopname' 'specloopname_ln69' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (3.40ns)   --->   "%write_ln73 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ch0_in, i32 %trunc_ln73" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:73]   --->   Operation 26 'write' 'write_ln73' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 27 [1/1] (3.40ns)   --->   "%write_ln74 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ch1_in, i32 %tmp_2" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:74]   --->   Operation 27 'write' 'write_ln74' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 28 [1/1] (3.40ns)   --->   "%write_ln75 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ch2_in, i32 %tmp_3" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:75]   --->   Operation 28 'write' 'write_ln75' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 29 [1/1] (3.40ns)   --->   "%write_ln76 = write void @_ssdm_op_Write.ap_fifo.volatile.i32P0A, i32 %ch3_in, i32 %tmp_s" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:76]   --->   Operation 29 'write' 'write_ln76' <Predicate = true> <Delay = 3.40> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln69 = br void %for.inc" [/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69]   --->   Operation 30 'br' 'br_ln69' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.197ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln69', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69) of constant 0 on local variable 'i', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69 [12]  (1.298 ns)
+	'load' operation 11 bit ('i', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69) on local variable 'i', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69 [15]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln69', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:69) [16]  (1.482 ns)
+	fifo read operation ('stream_compute_to_fft_read', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:71) on port 'stream_compute_to_fft' (/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:71) [23]  (3.418 ns)
+
+ <State 2>: 3.401ns
+The critical path consists of the following:
+	fifo write operation ('write_ln73', /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:73) on port 'ch0_in' (/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:73) [26]  (3.401 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

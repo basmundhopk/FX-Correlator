@@ -1,4 +1,0 @@
-1 warning and 1 error generated.
-Error while processing /home/brett/Documents/FX_Correlator/pfb/hls_pfb/hls_pfb/hls/.autopilot/db/pfb.pp.0.cpp.
-clang-tidy applied 5 of 5 suggested fixes.
-Suppressed 1 warnings (1 with check filters).

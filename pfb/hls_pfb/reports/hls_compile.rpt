@@ -1,0 +1,395 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pfb_multichannel'
+================================================================
++ General Information: 
+    * Date:           Fri Jan  9 19:34:49 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        hls_pfb
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z045-ffg900-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+-------------+-------------+-----+
+    |           Modules           | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |           |         |             |             |     |
+    |           & Loops           | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM    |   DSP   |      FF     |     LUT     | URAM|
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+-------------+-------------+-----+
+    |+ pfb_multichannel*          |     -|  0.00|     5199|  5.199e+04|         -|     5200|     -|  dataflow|  141 (12%)|  83 (9%)|  45513 (10%)|  36766 (16%)|    -|
+    | + read_inputs               |     -|  3.22|     1026|  1.026e+04|         -|     1026|     -|        no|          -|        -|    142 (~0%)|    145 (~0%)|    -|
+    |  o read_loop                |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|        -|            -|            -|    -|
+    | + decimate_pfb              |     -|  0.00|     5199|  5.199e+04|         -|     5199|     -|        no|    37 (3%)|  35 (3%)|   2593 (~0%)|    2416 (1%)|    -|
+    |  o load_coeffs              |     -|  7.30|     4096|  4.096e+04|         2|        1|  4096|       yes|          -|        -|            -|            -|    -|
+    |  o compute_loop             |     -|  7.30|     1029|  1.029e+04|         7|        1|  1024|       yes|          -|        -|            -|            -|    -|
+    | + fft*                      |     -|  0.00|     3198|  3.198e+04|         -|     3196|     -|  dataflow|    12 (1%)|  48 (5%)|   41280 (9%)|  32784 (14%)|    -|
+    |  + unpack                   |     -|  1.10|     1026|  1.026e+04|         -|     1026|     -|        no|          -|        -|    143 (~0%)|    119 (~0%)|    -|
+    |   o unpack_loop             |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|        -|            -|            -|    -|
+    |  + fft_Block_entry13_proc1  |     -|  3.90|        0|      0.000|         -|        0|     -|        no|          -|        -|      2 (~0%)|     46 (~0%)|    -|
+    |  + fft_config1_1*           |     -|  0.00|     3195|  3.195e+04|         -|     3196|     -|  dataflow|    3 (~0%)|  12 (1%)|    9883 (2%)|    7835 (3%)|    -|
+    |   + fft_syn_config1_s       |     -|  5.30|     3195|  3.195e+04|         -|     3195|     -|        no|        N/A|      N/A|          N/A|          N/A|  N/A|
+    |  + fft_config1_2*           |     -|  0.00|     3195|  3.195e+04|         -|     3196|     -|  dataflow|    3 (~0%)|  12 (1%)|    9883 (2%)|    7835 (3%)|    -|
+    |   + fft_syn_config1_4       |     -|  5.30|     3195|  3.195e+04|         -|     3195|     -|        no|        N/A|      N/A|          N/A|          N/A|  N/A|
+    |  + fft_config1_3*           |     -|  0.00|     3195|  3.195e+04|         -|     3196|     -|  dataflow|    3 (~0%)|  12 (1%)|    9883 (2%)|    7835 (3%)|    -|
+    |   + fft_syn_config1_5       |     -|  5.30|     3195|  3.195e+04|         -|     3195|     -|        no|        N/A|      N/A|          N/A|          N/A|  N/A|
+    |  + fft_config1_s*           |     -|  0.00|     3195|  3.195e+04|         -|     3196|     -|  dataflow|    3 (~0%)|  12 (1%)|    9883 (2%)|    7835 (3%)|    -|
+    |   + fft_syn_config1_6       |     -|  5.30|     3195|  3.195e+04|         -|     3195|     -|        no|        N/A|      N/A|          N/A|          N/A|  N/A|
+    |  + repack                   |     -|  0.48|     1026|  1.026e+04|         -|     1026|     -|        no|          -|        -|     14 (~0%)|    109 (~0%)|    -|
+    |   o repack_loop             |     -|  7.30|     1024|  1.024e+04|         2|        1|  1024|       yes|          -|        -|            -|            -|    -|
+    |  + fft_Block_entry19_proc2  |     -|  3.90|        0|      0.000|         -|        0|     -|        no|          -|        -|      2 (~0%)|     46 (~0%)|    -|
+    | + write_outputs             |     -|  2.88|     1027|  1.027e+04|         -|     1027|     -|        no|          -|        -|     16 (~0%)|    112 (~0%)|    -|
+    |  o write_loop               |     -|  7.30|     1025|  1.025e+04|         3|        1|  1024|       yes|          -|        -|            -|            -|    -|
+    +-----------------------------+------+------+---------+-----------+----------+---------+------+----------+-----------+---------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 16 -> 16   | 64            | 64      | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 4             |        |          |
+| s_axi_control_r | 32         | 5             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control_r | coeff_1  | 0x10   | 32    | W      | Data signal of coeff             |                                                                      |
+| s_axi_control_r | coeff_2  | 0x14   | 32    | W      | Data signal of coeff             |                                                                      |
++-----------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-------------+-----------+---------------+-------+--------+--------+
+| Interface   | Direction | Register Mode | TDATA | TREADY | TVALID |
++-------------+-----------+---------------+-------+--------+--------+
+| din_data_i0 | in        | both          | 16    | 1      | 1      |
+| din_data_i1 | in        | both          | 16    | 1      | 1      |
+| din_data_i2 | in        | both          | 16    | 1      | 1      |
+| din_data_i3 | in        | both          | 16    | 1      | 1      |
+| din_data_q0 | in        | both          | 16    | 1      | 1      |
+| din_data_q1 | in        | both          | 16    | 1      | 1      |
+| din_data_q2 | in        | both          | 16    | 1      | 1      |
+| din_data_q3 | in        | both          | 16    | 1      | 1      |
+| dout_data_0 | out       | both          | 32    | 1      | 1      |
+| dout_data_1 | out       | both          | 32    | 1      | 1      |
+| dout_data_2 | out       | both          | 32    | 1      | 1      |
+| dout_data_3 | out       | both          | 32    | 1      | 1      |
++-------------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+-------------------------------------------------+
+| Argument    | Direction | Datatype                                        |
++-------------+-----------+-------------------------------------------------+
+| din_data_i0 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_q0 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_i1 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_q1 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_i2 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_q2 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_i3 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| din_data_q3 | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| dout_data_0 | out       | stream<ap_fixed<32, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| dout_data_1 | out       | stream<ap_fixed<32, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| dout_data_2 | out       | stream<ap_fixed<32, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| dout_data_3 | out       | stream<ap_fixed<32, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| coeff       | in        | ap_fixed<16, 1, AP_TRN, AP_WRAP, 0> const *     |
++-------------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++-------------+-----------------+-----------+----------+-----------------------------------+
+| Argument    | HW Interface    | HW Type   | HW Usage | HW Info                           |
++-------------+-----------------+-----------+----------+-----------------------------------+
+| din_data_i0 | din_data_i0     | interface |          |                                   |
+| din_data_q0 | din_data_q0     | interface |          |                                   |
+| din_data_i1 | din_data_i1     | interface |          |                                   |
+| din_data_q1 | din_data_q1     | interface |          |                                   |
+| din_data_i2 | din_data_i2     | interface |          |                                   |
+| din_data_q2 | din_data_q2     | interface |          |                                   |
+| din_data_i3 | din_data_i3     | interface |          |                                   |
+| din_data_q3 | din_data_q3     | interface |          |                                   |
+| dout_data_0 | dout_data_0     | interface |          |                                   |
+| dout_data_1 | dout_data_1     | interface |          |                                   |
+| dout_data_2 | dout_data_2     | interface |          |                                   |
+| dout_data_3 | dout_data_3     | interface |          |                                   |
+| coeff       | m_axi_gmem      | interface |          |                                   |
+| coeff       | s_axi_control_r | register  | offset   | name=coeff_1 offset=0x10 range=32 |
+| coeff       | s_axi_control_r | register  | offset   | name=coeff_2 offset=0x14 range=32 |
++-------------+-----------------+-----------+----------+-----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-------------+-----------------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop        | Loop Location                                                         |
++--------------+-----------+--------+-------+-------------+-----------------------------------------------------------------------+
+| m_axi_gmem   | read      | 4096   | 16    | load_coeffs | /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_compute.cpp:23:22 |
++--------------+-----------+--------+-------+-------------+-----------------------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-------------+-----------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                                       | Direction | Burst Status | Length | Loop        | Loop Location                                                         | Resolution | Problem                                                                                               |
++--------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-------------+-----------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | coeff    | /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_compute.cpp:25:18 | read      | Widen Fail   |        | load_coeffs | /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_compute.cpp:23:22 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | coeff    | /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_compute.cpp:25:18 | read      | Inferred     | 4096   | load_coeffs | /home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_compute.cpp:23:22 |            |                                                                                                       |
++--------------+----------+-----------------------------------------------------------------------+-----------+--------------+--------+-------------+-----------------------------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+-------------+-----+-----------+---------+
+| Name                                 | DSP | Pragma | Variable    | Op  | Impl      | Latency |
++--------------------------------------+-----+--------+-------------+-----+-----------+---------+
+| + pfb_multichannel                   | 83  |        |             |     |           |         |
+|  + read_inputs                       | 0   |        |             |     |           |         |
+|    i_8_fu_129_p2                     |     |        | i_8         | add | fabric    | 0       |
+|  + decimate_pfb                      | 35  |        |             |     |           |         |
+|    add_ln23_1_fu_1085_p2             |     |        | add_ln23_1  | add | fabric    | 0       |
+|    i_fu_1053_p2                      |     |        | i           | add | fabric    | 0       |
+|    add_ln23_2_fu_1059_p2             |     |        | add_ln23_2  | add | fabric    | 0       |
+|    add_ln30_1_fu_1382_p2             |     |        | add_ln30_1  | add | fabric    | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U67 | 1   |        | mul_ln55    | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U68 | 1   |        | mul_ln51    | mul | dsp_slice | 3       |
+|    mul_11ns_13ns_23_1_1_U18          | 1   |        | mul_ln52    | mul | auto      | 0       |
+|    mul_12ns_14ns_25_1_1_U19          | 1   |        | mul_ln52_1  | mul | auto      | 0       |
+|    mul_12ns_14ns_25_1_1_U20          | 1   |        | mul_ln52_2  | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U69 | 1   |        | mul_ln55_1  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U70 | 1   |        | mul_ln51_1  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U71 | 1   |        | mul_ln55_2  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U72 | 1   |        | mul_ln51_2  | mul | dsp_slice | 3       |
+|    mul_16s_16s_31_1_1_U49            | 1   |        | mul_ln55_3  | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U50            | 1   |        | mul_ln51_3  | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U51            | 1   |        | mul_ln51_4  | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U52            | 1   |        | mul_ln51_5  | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U73 | 1   |        | mul_ln54    | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U67 | 1   |        | tmp3        | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U73 | 1   |        | tmp7        | add | dsp_slice | 3       |
+|    tmp2_fu_2307_p2                   |     |        | tmp2        | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U53            | 1   |        | mul_ln51_6  | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U54            | 1   |        | mul_ln51_7  | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U74 | 1   |        | mul_ln54_1  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U69 | 1   |        | tmp11       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U74 | 1   |        | tmp15       | add | dsp_slice | 3       |
+|    tmp6_fu_2321_p2                   |     |        | tmp6        | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U55            | 1   |        | mul_ln51_8  | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U56            | 1   |        | mul_ln51_9  | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U75 | 1   |        | mul_ln54_2  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U71 | 1   |        | tmp19       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U75 | 1   |        | tmp23       | add | dsp_slice | 3       |
+|    tmp10_fu_2335_p2                  |     |        | tmp10       | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U57            | 1   |        | mul_ln51_10 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U58            | 1   |        | mul_ln51_11 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U59            | 1   |        | mul_ln51_12 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U60            | 1   |        | mul_ln51_13 | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U76 | 1   |        | mul_ln55_4  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U68 | 1   |        | tmp27       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U76 | 1   |        | tmp31       | add | dsp_slice | 3       |
+|    tmp14_fu_2349_p2                  |     |        | tmp14       | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U61            | 1   |        | mul_ln51_14 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U62            | 1   |        | mul_ln51_15 | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U77 | 1   |        | mul_ln55_5  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U70 | 1   |        | tmp32       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U77 | 1   |        | tmp33       | add | dsp_slice | 3       |
+|    tmp18_fu_2363_p2                  |     |        | tmp18       | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U63            | 1   |        | mul_ln51_16 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U64            | 1   |        | mul_ln51_17 | mul | auto      | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U78 | 1   |        | mul_ln55_6  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U72 | 1   |        | tmp34       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U78 | 1   |        | tmp35       | add | dsp_slice | 3       |
+|    tmp22_fu_2377_p2                  |     |        | tmp22       | add | fabric    | 0       |
+|    mul_16s_16s_31_1_1_U65            | 1   |        | mul_ln51_18 | mul | auto      | 0       |
+|    mul_16s_16s_31_1_1_U66            | 1   |        | mul_ln51_19 | mul | auto      | 0       |
+|    k_fu_1350_p2                      |     |        | k           | add | fabric    | 0       |
+|    add_ln51_fu_1356_p2               |     |        | add_ln51    | add | fabric    | 0       |
+|    mac_muladd_16s_16s_31s_31_4_1_U79 | 1   |        | mul_ln54_3  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U79 | 1   |        | tmp37       | add | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U80 | 1   |        | mul_ln55_7  | mul | dsp_slice | 3       |
+|    mac_muladd_16s_16s_31s_31_4_1_U80 | 1   |        | tmp39       | add | dsp_slice | 3       |
+|    add_ln64_fu_2442_p2               |     |        | add_ln64    | add | fabric    | 0       |
+|  + fft                               | 48  |        |             |     |           |         |
+|   + unpack                           | 0   |        |             |     |           |         |
+|     i_4_fu_108_p2                    |     |        | i_4         | add | fabric    | 0       |
+|   + repack                           | 0   |        |             |     |           |         |
+|     i_6_fu_93_p2                     |     |        | i_6         | add | fabric    | 0       |
+|  + write_outputs                     | 0   |        |             |     |           |         |
+|    i_2_fu_132_p2                     |     |        | i_2         | add | fabric    | 0       |
++--------------------------------------+-----+--------+-------------+-----+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------------------------------------------------------------+--------------+-----------+------+------+--------+-----------------------------------------------------------------------+--------+---------+------------------+
+| Name                                                                       | Usage        | Type      | BRAM | URAM | Pragma | Variable                                                              | Impl   | Latency | Bitwidth, Depth, |
+|                                                                            |              |           |      |      |        |                                                                       |        |         | Banks            |
++----------------------------------------------------------------------------+--------------+-----------+------+------+--------+-----------------------------------------------------------------------+--------+---------+------------------+
+| + pfb_multichannel                                                         |              |           | 141  | 0    |        |                                                                       |        |         |                  |
+|   control_s_axi_U                                                          | interface    | s_axilite |      |      |        |                                                                       |        |         |                  |
+|   control_r_s_axi_U                                                        | interface    | s_axilite |      |      |        |                                                                       |        |         |                  |
+|   gmem_m_axi_U                                                             | interface    | m_axi     | 2    |      |        |                                                                       |        |         |                  |
+|   stream_read_to_compute_U                                                 | fifo channel | stream    | 30   |      |        | stream_read_to_compute                                                | memory | 0       | 128, 4096, 1     |
+|   stream_compute_to_fft_U                                                  | fifo channel | stream    | 30   |      |        | stream_compute_to_fft                                                 | memory | 0       | 128, 4096, 1     |
+|   stream_fft_to_write_U                                                    | fifo channel | stream    | 30   |      |        | stream_fft_to_write                                                   | memory | 0       | 128, 4096, 1     |
+|  + decimate_pfb                                                            |              |           | 37   | 0    |        |                                                                       |        |         |                  |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_4_U   | ram_s2p      |           | 1    |      |        | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_4   | auto   | 1       | 16, 820, 1       |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_3_U   | ram_s2p      |           | 1    |      |        | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_3   | auto   | 1       | 16, 820, 1       |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_2_U   | ram_s2p      |           | 1    |      |        | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_2   | auto   | 1       | 16, 820, 1       |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_1_U   | ram_s2p      |           | 1    |      |        | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_1   | auto   | 1       | 16, 820, 1       |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs_U     | ram_s2p      |           | 1    |      |        | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_local_coeffs     | auto   | 1       | 16, 820, 1       |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_31_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_31 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_2_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_2  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_1_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_1  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_U    | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory    | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_30_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_30 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_29_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_29 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_28_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_28 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_27_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_27 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_26_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_26 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_25_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_25 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_24_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_24 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_23_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_23 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_22_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_22 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_21_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_21 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_20_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_20 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_19_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_19 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_18_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_18 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_17_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_17 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_16_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_16 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_15_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_15 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_14_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_14 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_13_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_13 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_12_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_12 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_11_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_11 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_10_U | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_10 | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_9_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_9  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_8_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_8  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_7_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_7  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_6_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_6  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_5_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_5  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_4_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_4  | bram   | 1       | 16, 1024, 1      |
+|    decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_3_U  | ram_1p       |           | 1    |      | pragma | decimate_pfb_stream_stream_ap_fixed_16_1_5_3_0_const_branch_memory_3  | bram   | 1       | 16, 1024, 1      |
+|  + fft                                                                     |              |           | 12   | 0    |        |                                                                       |        |         |                  |
+|    ch0_in_U                                                                | fifo channel | stream    |      |      |        | ch0_in                                                                | srl    | 0       | 32, 2, 1         |
+|    ch1_in_U                                                                | fifo channel | stream    |      |      |        | ch1_in                                                                | srl    | 0       | 32, 2, 1         |
+|    ch2_in_U                                                                | fifo channel | stream    |      |      |        | ch2_in                                                                | srl    | 0       | 32, 2, 1         |
+|    ch3_in_U                                                                | fifo channel | stream    |      |      |        | ch3_in                                                                | srl    | 0       | 32, 2, 1         |
+|    cfg0_s_U                                                                | fifo channel | stream    |      |      |        | cfg0_s                                                                | srl    | 0       | 16, 2, 1         |
+|    cfg1_s_U                                                                | fifo channel | stream    |      |      |        | cfg1_s                                                                | srl    | 0       | 16, 2, 1         |
+|    cfg2_s_U                                                                | fifo channel | stream    |      |      |        | cfg2_s                                                                | srl    | 0       | 16, 2, 1         |
+|    cfg3_s_U                                                                | fifo channel | stream    |      |      |        | cfg3_s                                                                | srl    | 0       | 16, 2, 1         |
+|    ch0_out_U                                                               | fifo channel | stream    |      |      |        | ch0_out                                                               | srl    | 0       | 32, 2, 1         |
+|    stat0_s_U                                                               | fifo channel | stream    |      |      |        | stat0_s                                                               | srl    | 0       | 8, 2, 1          |
+|    ch1_out_U                                                               | fifo channel | stream    |      |      |        | ch1_out                                                               | srl    | 0       | 32, 2, 1         |
+|    stat1_s_U                                                               | fifo channel | stream    |      |      |        | stat1_s                                                               | srl    | 0       | 8, 2, 1          |
+|    ch2_out_U                                                               | fifo channel | stream    |      |      |        | ch2_out                                                               | srl    | 0       | 32, 2, 1         |
+|    stat2_s_U                                                               | fifo channel | stream    |      |      |        | stat2_s                                                               | srl    | 0       | 8, 2, 1          |
+|    ch3_out_U                                                               | fifo channel | stream    |      |      |        | ch3_out                                                               | srl    | 0       | 32, 2, 1         |
+|    stat3_s_U                                                               | fifo channel | stream    |      |      |        | stat3_s                                                               | srl    | 0       | 8, 2, 1          |
++----------------------------------------------------------------------------+--------------+-----------+------+------+--------+-----------------------------------------------------------------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++-----------+------------+------------------------------+------------------------------------------------------------------+
+| Type      | Options    | Location                     | Messages                                                         |
++-----------+------------+------------------------------+------------------------------------------------------------------+
+| interface | ap_ctrl_hs | pfb_io.cpp:15 in read_inputs | '#pragma HLS interface' can only be applied inside function body |
++-----------+------------+------------------------------+------------------------------------------------------------------+
+
+* Pragmas with Warnings
++----------+---------+----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location             | Messages                                                                                                                                                                           |
++----------+---------+----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | pfb_fft.cpp:8 in fft | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------------------------+------------------------------------------------------------+
+| Type            | Options                                                         | Location                                                   |
++-----------------+-----------------------------------------------------------------+------------------------------------------------------------+
+| inline          | off                                                             | pfb_compute.cpp:8 in decimate_pfb                          |
+| interface       | ap_ctrl_hs port=return                                          | pfb_compute.cpp:9 in decimate_pfb, return                  |
+| array_partition | variable=branch_memory complete dim=1                           | pfb_compute.cpp:13 in decimate_pfb, branch_memory          |
+| array_partition | variable=branch_memory complete dim=2                           | pfb_compute.cpp:14 in decimate_pfb, branch_memory          |
+| bind_storage    | variable=branch_memory type=RAM_1P impl=BRAM                    | pfb_compute.cpp:15 in decimate_pfb, branch_memory          |
+| pipeline        | II=1 rewind                                                     | pfb_compute.cpp:24 in decimate_pfb                         |
+| pipeline        | II=1 rewind                                                     | pfb_compute.cpp:31 in decimate_pfb                         |
+| unroll          |                                                                 | pfb_compute.cpp:36 in decimate_pfb                         |
+| unroll          |                                                                 | pfb_compute.cpp:43 in decimate_pfb                         |
+| unroll          |                                                                 | pfb_compute.cpp:48 in decimate_pfb                         |
+| inline          | off                                                             | pfb_io.cpp:10 in read_inputs                               |
+| pipeline        | II=1                                                            | pfb_io.cpp:13 in read_inputs                               |
+| inline          | off                                                             | pfb_io.cpp:35 in write_outputs                             |
+| interface       | ap_ctrl_hs port=return                                          | pfb_io.cpp:37 in write_outputs, return                     |
+| pipeline        | II=1                                                            | pfb_io.cpp:42 in write_outputs                             |
+| inline          | off                                                             | pfb_io.cpp:67 in unpack                                    |
+| pipeline        | II=1                                                            | pfb_io.cpp:70 in unpack                                    |
+| inline          | off                                                             | pfb_io.cpp:87 in repack                                    |
+| pipeline        | II=1                                                            | pfb_io.cpp:90 in repack                                    |
+| interface       | axis port=din_data_i0                                           | pfb_top.cpp:16 in pfb_multichannel, din_data_i0            |
+| interface       | axis port=din_data_q0                                           | pfb_top.cpp:17 in pfb_multichannel, din_data_q0            |
+| interface       | axis port=din_data_i1                                           | pfb_top.cpp:18 in pfb_multichannel, din_data_i1            |
+| interface       | axis port=din_data_q1                                           | pfb_top.cpp:19 in pfb_multichannel, din_data_q1            |
+| interface       | axis port=din_data_i2                                           | pfb_top.cpp:20 in pfb_multichannel, din_data_i2            |
+| interface       | axis port=din_data_q2                                           | pfb_top.cpp:21 in pfb_multichannel, din_data_q2            |
+| interface       | axis port=din_data_i3                                           | pfb_top.cpp:22 in pfb_multichannel, din_data_i3            |
+| interface       | axis port=din_data_q3                                           | pfb_top.cpp:23 in pfb_multichannel, din_data_q3            |
+| interface       | axis port=dout_data_0                                           | pfb_top.cpp:25 in pfb_multichannel, dout_data_0            |
+| interface       | axis port=dout_data_1                                           | pfb_top.cpp:26 in pfb_multichannel, dout_data_1            |
+| interface       | axis port=dout_data_2                                           | pfb_top.cpp:27 in pfb_multichannel, dout_data_2            |
+| interface       | axis port=dout_data_3                                           | pfb_top.cpp:28 in pfb_multichannel, dout_data_3            |
+| interface       | m_axi port=coeff offset=slave bundle=gmem depth=4096 latency=64 | pfb_top.cpp:30 in pfb_multichannel, coeff                  |
+| interface       | s_axilite port=return bundle=control                            | pfb_top.cpp:31 in pfb_multichannel, return                 |
+| dataflow        |                                                                 | pfb_top.cpp:33 in pfb_multichannel                         |
+| stream          | variable=stream_read_to_compute depth=4096                      | pfb_top.cpp:39 in pfb_multichannel, stream_read_to_compute |
+| stream          | variable=stream_compute_to_fft depth=4096                       | pfb_top.cpp:40 in pfb_multichannel, stream_compute_to_fft  |
+| stream          | variable=stream_fft_to_write depth=4096                         | pfb_top.cpp:41 in pfb_multichannel, stream_fft_to_write    |
++-----------------+-----------------------------------------------------------------+------------------------------------------------------------+
+
+* Inferred Pragmas
++-----------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Pragma               | Inferred Pragma | Options                                                                                                                                                            | Location                                                                                                                                                                               |
++-----------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pipeline pfb_compute.cpp:31 | array_partition | dim=1 type=cyclic factor=5 variable=_ZZ12decimate_pfbRN3hls6streamI17parallel_sample_tLi0EEES3_PK8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEE12local_coeffs | variable decimate_pfb(hls::stream<parallel_sample_t, 0>&, hls::stream<parallel_sample_t, 0>&, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*)::local_coeffs in pfb_multichannel |
++-----------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+

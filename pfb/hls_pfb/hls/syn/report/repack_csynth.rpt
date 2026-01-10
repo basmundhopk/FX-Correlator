@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'repack'
+================================================================
+* Date:           Fri Jan  9 19:34:47 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls_pfb
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z045-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.819 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     1026|     1026|  10.260 us|  10.260 us|  1026|  1026|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- repack_loop  |     1024|     1024|         2|          1|          1|  1024|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      28|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      81|    -|
+|Register         |        -|    -|      14|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      14|     109|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1090|  900|  437200|  218600|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |i_6_fu_93_p2                      |         +|   0|  0|  11|          11|           1|
+    |ap_condition_116                  |       and|   0|  0|   1|           1|           1|
+    |icmp_ln89_fu_87_p2                |      icmp|   0|  0|  12|          11|          12|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   1|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   1|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  28|          26|          18|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done_int                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_5       |   9|          2|   11|         22|
+    |ch0_out_blk_n              |   9|          2|    1|          2|
+    |ch1_out_blk_n              |   9|          2|    1|          2|
+    |ch2_out_blk_n              |   9|          2|    1|          2|
+    |ch3_out_blk_n              |   9|          2|    1|          2|
+    |i_fu_44                    |   9|          2|   11|         22|
+    |stream_fft_to_write_blk_n  |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      |  81|         18|   29|         58|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_44                  |  11|   0|   11|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  14|   0|   14|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------+-----+-----+------------+---------------------+--------------+
+|              RTL Ports             | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                              |   in|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_rst                              |   in|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_start                            |   in|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_done                             |  out|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_continue                         |   in|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_idle                             |  out|    1|  ap_ctrl_hs|               repack|  return value|
+|ap_ready                            |  out|    1|  ap_ctrl_hs|               repack|  return value|
+|ch0_out_dout                        |   in|   32|     ap_fifo|              ch0_out|       pointer|
+|ch0_out_num_data_valid              |   in|    3|     ap_fifo|              ch0_out|       pointer|
+|ch0_out_fifo_cap                    |   in|    3|     ap_fifo|              ch0_out|       pointer|
+|ch0_out_empty_n                     |   in|    1|     ap_fifo|              ch0_out|       pointer|
+|ch0_out_read                        |  out|    1|     ap_fifo|              ch0_out|       pointer|
+|ch1_out_dout                        |   in|   32|     ap_fifo|              ch1_out|       pointer|
+|ch1_out_num_data_valid              |   in|    3|     ap_fifo|              ch1_out|       pointer|
+|ch1_out_fifo_cap                    |   in|    3|     ap_fifo|              ch1_out|       pointer|
+|ch1_out_empty_n                     |   in|    1|     ap_fifo|              ch1_out|       pointer|
+|ch1_out_read                        |  out|    1|     ap_fifo|              ch1_out|       pointer|
+|ch2_out_dout                        |   in|   32|     ap_fifo|              ch2_out|       pointer|
+|ch2_out_num_data_valid              |   in|    3|     ap_fifo|              ch2_out|       pointer|
+|ch2_out_fifo_cap                    |   in|    3|     ap_fifo|              ch2_out|       pointer|
+|ch2_out_empty_n                     |   in|    1|     ap_fifo|              ch2_out|       pointer|
+|ch2_out_read                        |  out|    1|     ap_fifo|              ch2_out|       pointer|
+|ch3_out_dout                        |   in|   32|     ap_fifo|              ch3_out|       pointer|
+|ch3_out_num_data_valid              |   in|    3|     ap_fifo|              ch3_out|       pointer|
+|ch3_out_fifo_cap                    |   in|    3|     ap_fifo|              ch3_out|       pointer|
+|ch3_out_empty_n                     |   in|    1|     ap_fifo|              ch3_out|       pointer|
+|ch3_out_read                        |  out|    1|     ap_fifo|              ch3_out|       pointer|
+|stream_fft_to_write_din             |  out|  128|     ap_fifo|  stream_fft_to_write|       pointer|
+|stream_fft_to_write_num_data_valid  |   in|   13|     ap_fifo|  stream_fft_to_write|       pointer|
+|stream_fft_to_write_fifo_cap        |   in|   13|     ap_fifo|  stream_fft_to_write|       pointer|
+|stream_fft_to_write_full_n          |   in|    1|     ap_fifo|  stream_fft_to_write|       pointer|
+|stream_fft_to_write_write           |  out|    1|     ap_fifo|  stream_fft_to_write|       pointer|
++------------------------------------+-----+-----+------------+---------------------+--------------+
+

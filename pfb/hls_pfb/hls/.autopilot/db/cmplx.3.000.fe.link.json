@@ -1,0 +1,194 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "2 9 8 12",
+    "file": "pfb_top.cpp",
+    "fileloc": 3,
+    "instructions": 73,
+    "name": "pfb_multichannel",
+    "total_instructions": 5043
+  },
+  "1": {
+    "basicblocks": 5,
+    "calls": "3",
+    "file": "hls_fft.h",
+    "fileloc": 239,
+    "instructions": 27,
+    "name": "setSch",
+    "total_instructions": 73
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "6 4",
+    "file": "hls_fft.h",
+    "fileloc": 366,
+    "instructions": 15,
+    "name": "getOvflo",
+    "total_instructions": 51
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 211,
+    "instructions": 13,
+    "name": "setDir",
+    "total_instructions": 58
+  },
+  "12": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "pfb_io.cpp",
+    "fileloc": 28,
+    "instructions": 118,
+    "name": "write_outputs",
+    "total_instructions": 1096
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 91,
+    "instructions": 2,
+    "name": "config_t",
+    "total_instructions": 2
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 220,
+    "instructions": 14,
+    "name": "getDir",
+    "total_instructions": 48
+  },
+  "15": {
+    "basicblocks": 5,
+    "calls": "3",
+    "file": "hls_fft.h",
+    "fileloc": 254,
+    "instructions": 28,
+    "name": "getSch",
+    "total_instructions": 63
+  },
+  "16": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "pfb_io.cpp",
+    "fileloc": 60,
+    "instructions": 68,
+    "name": "unpack",
+    "total_instructions": 118
+  },
+  "17": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "pfb_io.cpp",
+    "fileloc": 80,
+    "instructions": 88,
+    "loads": {
+      "L": 8
+    },
+    "name": "repack",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 132
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "pfb_io.cpp",
+    "fileloc": 3,
+    "instructions": 104,
+    "loads": {
+      "L": 8
+    },
+    "name": "read_inputs",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 156
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 134,
+    "instructions": 1,
+    "name": "checkSch",
+    "total_instructions": 1
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 324,
+    "instructions": 1,
+    "name": "checkOvflo",
+    "total_instructions": 1
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "hls_fft_x_complex.h",
+    "fileloc": 696,
+    "instructions": 5,
+    "name": "fft<config1>",
+    "total_instructions": 256
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_fft.h",
+    "fileloc": 294,
+    "instructions": 1,
+    "name": "checkBitWidth",
+    "total_instructions": 1
+  },
+  "7": {
+    "basicblocks": 10,
+    "calls": "15 14 14",
+    "file": "hls_fft_x_complex.h",
+    "fileloc": 509,
+    "instructions": 52,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "fft_syn<config1>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 251
+  },
+  "8": {
+    "basicblocks": 5,
+    "calls": "16 13 13 13 13 11 1 11 1 11 1 11 1 5 5 5 5 17 10 10 10 10",
+    "file": "pfb_fft.cpp",
+    "fileloc": 3,
+    "instructions": 237,
+    "name": "fft",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 2303
+  },
+  "9": {
+    "basicblocks": 35,
+    "calls": "",
+    "file": "pfb_compute.cpp",
+    "fileloc": 3,
+    "instructions": 201,
+    "loads": {
+      "G": 4,
+      "L": 4
+    },
+    "name": "decimate_pfb",
+    "stores": {
+      "G": 4,
+      "L": 4
+    },
+    "total_instructions": 1412
+  }
+}

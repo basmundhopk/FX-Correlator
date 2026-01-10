@@ -1,4 +1,0 @@
-/home/brett/Documents/FX_Correlator/pfb/hls_pfb/pfb_io.cpp:15:9: warning: '#pragma HLS interface' can only be applied inside function body [-Winvalid-hls-pragmas]
-#pragma HLS INTERFACE ap_ctrl_hs port=return
-        ^
-1 warning generated.
